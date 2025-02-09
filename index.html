@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tic Tac Toe</title>
 </head>
 <body>
+
+    <dialog class="initial-form" id="modal">
+        <h1>Tic Tac Toe</h1>
+        <form action="" id="form">
+            <div class="field-container">
+                <div class="form-field">
+                    <label for="player1">The "X"</label>
+                    <input type="text" id="player1" placeholder="Type your name..." required autocomplete="off"/>
+                </div>
+                <div class="form-field">
+                    <label for="player2">The "O"</label>
+                    <input type="text" id="player2" placeholder="Type your name..." required autocomplete="off"/>
+                </div>
+            </div>
+            <button type="submit" class="btn">Start Game</button>
+        </form>
+    </dialog>
+
+    <main class="game-container hidden" id="game-container">
+        <aside class="message-display" id="displayMsg">
+            <h2>Game stats</h2>
+            <p id="gameMsg"></p>
+        </aside>
+
+        <div class="board-container" id="board">
+        </div>
+        
+        <div class="btn-container">
+            <button id="playAgain" class="playAgain btn">Play again</button>
+            <button id="newPlayers" class="newPlayers btn">New players</button>
+        </div>
+    </main>
+    
+    <footer id="footer" class="hidden">
+        <p>Developed by <a href="https://github.com/RbsDeveloper/TicTacToe-OdinProject" target="_blank"><i class="fa-brands fa-github"></i>RbsDeveloper</a></p>
+    </footer>
+
+
     <script src="./script.js"></script>
 </body>
 </html>
